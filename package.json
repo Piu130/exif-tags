@@ -1,7 +1,7 @@
 {
   "name": "exif-tags",
   "version": "1.0.0",
-  "description": "",
+  "description": "This library provides exif tags and it's identifier.",
   "main": "exif-tags.js",
   "scripts": {
     "lint": "eslint exif-tags.js"
