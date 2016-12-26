@@ -1,6 +1,6 @@
 {
   "name": "exif-tags",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "This library provides exif tags and it's identifier.",
   "main": "exif-tags.js",
   "scripts": {
