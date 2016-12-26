@@ -1,6 +1,6 @@
 {
   "name": "exif-tags",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This library provides exif tags and it's identifier.",
   "main": "exif-tags.js",
   "scripts": {
@@ -10,7 +10,9 @@
     "type": "git",
     "url": "git+https://github.com/Piu130/exif-tags.git"
   },
-  "pre-commit": ["lint"],
+  "pre-commit": [
+    "lint"
+  ],
   "author": "",
   "license": "Unlicense",
   "bugs": {
