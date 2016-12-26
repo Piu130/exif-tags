@@ -204,13 +204,11 @@ const tiff = {
  * Returns all tags in a flat structure
  * @returns {*}
  */
-function getAllTags () {
-  return Object.assign({},
-    exifPointer,
-    tiff,
-    exifIfd,
-    gps
-  )
-}
+const allTags = Object.assign({},
+  exifPointer,
+  tiff,
+  exifIfd,
+  gps
+)
 
-export {jpegStartNumber, exifStartNumber, exifString, littleEndianIndicator, bigEndianIndicator, exifPointer, tiff, exifIfd, gps, getAllTags}
+export {jpegStartNumber, exifStartNumber, exifString, littleEndianIndicator, bigEndianIndicator, exifPointer, tiff, exifIfd, gps, allTags}
