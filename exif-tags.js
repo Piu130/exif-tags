@@ -233,7 +233,7 @@ function getAllTags () {
   return Object.assign({},
     exifPointer,
     tiff.imageDataStructure, tiff.recordingOffset, tiff.imageDataCharacteristic, tiff.other,
-    exifIfd.version, exifIfd.imageDataCharacteristic, exifIfd.imageConfiguration, exifIfd.userInformation, exifIfd.fileInformation, exifIfd.dateAndTime, exifIfd.pictureTakingConditions, exifIfd.shootingSituation, exifIfd.others,
+    exifIfd.version, exifIfd.imageDataCharacteristic, exifIfd.imageConfiguration, exifIfd.userInformation, exifIfd.fileInformation, exifIfd.dateAndTime, exifIfd.pictureTakingCondition, exifIfd.shootingSituation, exifIfd.others,
     gps
   )
 }
