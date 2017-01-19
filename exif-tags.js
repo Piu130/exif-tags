@@ -1,8 +1,32 @@
 /**
+ * Indicates start of a JPEG
+ * @type {number}
+ */
+const jpegStartNumber = 0xFFD8
+
+/**
+ * Hex value for 'Exif'
+ * @type {number}
+ */
+const exifString = 0x45786966 // Exif
+
+/**
+ * Indicates start of the EXIF attribute
+ * @type {number}
+ */
+const exifStartNumber = 0xFFE1
+
+/**
  * Hex value for 'MM'. This indicates big endian.
  * @type {number}
  */
 const bigEndianIndicator = 0x4D4D // MM
+
+/**
+ * Hex value for 'II'. This indicates little endian.
+ * @type {number}
+ */
+const littleEndianIndicator = 0x4949 // II
 
 /**
  * EXIF IFD tags
@@ -101,18 +125,6 @@ const exifPointer = {
 }
 
 /**
- * Indicates start of the EXIF attribute
- * @type {number}
- */
-const exifStartNumber = 0xFFE1
-
-/**
- * Hex value for 'Exif'
- * @type {number}
- */
-const exifString = 0x45786966 // Exif
-
-/**
  * GPS tags
  * @type {object}
  */
@@ -150,18 +162,6 @@ const gps = {
   0x001E: 'GPSDifferential',
   0x001F: 'GPSHPositioningError'
 }
-
-/**
- * Indicates start of a JPEG
- * @type {number}
- */
-const jpegStartNumber = 0xFFD8
-
-/**
- * Hex value for 'II'. This indicates little endian.
- * @type {number}
- */
-const littleEndianIndicator = 0x4949 // II
 
 /**
  * TIFF tags
