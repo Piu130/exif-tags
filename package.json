@@ -2,28 +2,26 @@
   "name": "exif-tags",
   "version": "2.0.3",
   "description": "This library provides exif tags and it's identifier.",
-  "main": "exif-tags.js",
+  "main": "src/exif-tags.js",
   "scripts": {
-    "lint": "eslint exif-tags.js"
+    "lint": "neutrino lint --use @neutrinojs/standardjs"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Piu130/exif-tags.git"
+    "url": "git+https://github.com/piu130/exif-tags.git"
   },
   "pre-commit": [
     "lint"
   ],
-  "author": "Piu130",
+  "author": "piu130",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Piu130/exif-tags/issues"
+    "url": "https://github.com/piu130/exif-tags/issues"
   },
-  "homepage": "https://github.com/Piu130/exif-tags#readme",
+  "homepage": "https://github.com/piu130/exif-tags#readme",
   "devDependencies": {
-    "eslint": "^3.12.2",
-    "eslint-config-standard": "^6.2.1",
-    "eslint-plugin-promise": "^3.4.0",
-    "eslint-plugin-standard": "^2.0.1",
+    "@neutrinojs/standardjs": "^8.3.0",
+    "neutrino": "^8.3.0",
     "pre-commit": "^1.2.2"
   }
 }

@@ -211,4 +211,15 @@ const allTags = Object.assign({},
   gps
 )
 
-export {jpegStartNumber, exifStartNumber, exifString, littleEndianIndicator, bigEndianIndicator, exifPointer, tiff, exifIfd, gps, allTags}
+export {
+  jpegStartNumber,
+  exifStartNumber,
+  exifString,
+  littleEndianIndicator,
+  bigEndianIndicator,
+  exifPointer,
+  tiff,
+  exifIfd,
+  gps,
+  allTags
+}
