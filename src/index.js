@@ -211,7 +211,7 @@ const allTags = Object.assign({},
   gps
 )
 
-exports = {
+export {
   jpegStartNumber,
   exifStartNumber,
   exifString,
