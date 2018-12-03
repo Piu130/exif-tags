@@ -1,38 +1,38 @@
 /**
- * Indicates start of a JPEG
+ * Indicates start of a JPEG.
  * @type {number}
  */
-const jpegStartNumber = 0xFFD8
+export const jpegStartNumber = 0xFFD8
 
 /**
- * Hex value for 'Exif'
+ * Hex value for 'Exif'.
  * @type {number}
  */
-const exifString = 0x45786966 // Exif
+export const exifString = 0x45786966 // Exif
 
 /**
- * Indicates start of the EXIF attribute
+ * Indicates start of the EXIF attribute.
  * @type {number}
  */
-const exifStartNumber = 0xFFE1
+export const exifStartNumber = 0xFFE1
 
 /**
  * Hex value for 'MM'. This indicates big endian.
  * @type {number}
  */
-const bigEndianIndicator = 0x4D4D // MM
+export const bigEndianIndicator = 0x4D4D // MM
 
 /**
  * Hex value for 'II'. This indicates little endian.
  * @type {number}
  */
-const littleEndianIndicator = 0x4949 // II
+export const littleEndianIndicator = 0x4949 // II
 
 /**
- * EXIF IFD tags
- * @type {object}
+ * EXIF IFD tags.
+ * @type {Object.<number, string>}
  */
-const exifIfd = {
+export const exifIfdTags = {
   0x9000: 'ExifVersion',
   0xA000: 'FlashpixVersion',
   0xA001: 'ColorSpace',
@@ -115,20 +115,20 @@ const exifIfd = {
 }
 
 /**
- * EXIF pointers
- * @type {object}
+ * EXIF pointer tags.
+ * @type {Object.<number, string>}
  */
-const exifPointer = {
+export const exifPointerTags = {
   0x8769: 'ExifIFDPointer',
   0x8825: 'GPSInfoIFDPointer',
   0xA005: 'InteroperabilityIFDPointer'
 }
 
 /**
- * GPS tags
- * @type {object}
+ * GPS tags.
+ * @type {Object.<number, string>}
  */
-const gps = {
+export const gpsTags = {
   0x0000: 'GPSVersionID',
   0x0001: 'GPSLatitudeRef',
   0x0002: 'GPSLatitude',
@@ -164,10 +164,10 @@ const gps = {
 }
 
 /**
- * TIFF tags
- * @type {object}
+ * TIFF tags.
+ * @type {Object.<number, string>}
  */
-const tiff = {
+export const tiffTags = {
   0x0100: 'ImageWidth',
   0x0101: 'ImageLength',
   0x0102: 'BitsPerSample',
@@ -201,25 +201,12 @@ const tiff = {
 }
 
 /**
- * Returns all tags in a flat structure
- * @returns {*}
+ * All EXIF tags in a single object.
+ * @type {Object.<number, string>}
  */
-const allTags = Object.assign({},
-  exifPointer,
-  tiff,
-  exifIfd,
-  gps
-)
-
-export {
-  jpegStartNumber,
-  exifStartNumber,
-  exifString,
-  littleEndianIndicator,
-  bigEndianIndicator,
-  exifPointer,
-  tiff,
-  exifIfd,
-  gps,
-  allTags
+export const allTags = {
+  ...exifPointerTags,
+  ...tiffTags,
+  ...exifIfdTags,
+  ...gpsTags
 }
