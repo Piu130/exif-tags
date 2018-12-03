@@ -4,7 +4,8 @@
   "description": "This library provides exif tags and it's identifier.",
   "main": "src/index.js",
   "scripts": {
-    "lint": "neutrino lint --use @neutrinojs/standardjs"
+    "lint": "neutrino lint --use @neutrinojs/standardjs",
+    "doc": "jsdoc2md --template README.hbs --files src/index.js > README.md"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,7 @@
   "homepage": "https://github.com/piu130/exif-tags#readme",
   "devDependencies": {
     "@neutrinojs/standardjs": "^8.3.0",
+    "jsdoc-to-markdown": "^4.0.1",
     "neutrino": "^8.3.0",
     "pre-commit": "^1.2.2"
   }
