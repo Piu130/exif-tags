@@ -11,8 +11,10 @@ This library provides exif tags and it's identifier.
 | exifStartNumber | number | Indicates start of the EXIF attribute. |
 | bigEndianIndicator | number | Hex value for &#x27;MM&#x27;. This indicates big endian. |
 | littleEndianIndicator | number | Hex value for &#x27;II&#x27;. This indicates little endian. |
+| allTagsFull | Object.&lt;number, Tag&gt; | All tags with additional values. |
 | exifIfdTags | Object.&lt;number, string&gt; | EXIF IFD tags. |
 | exifPointerTags | Object.&lt;number, string&gt; | EXIF pointer tags. |
 | gpsTags | Object.&lt;number, string&gt; | GPS tags. |
 | tiffTags | Object.&lt;number, string&gt; | TIFF tags. |
 | allTags | Object.&lt;number, string&gt; | All EXIF tags in a single object. |
+| Tag | object | Represents a tag with id, name, group and category. |

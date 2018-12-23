@@ -28,6 +28,20 @@ export const bigEndianIndicator = 0x4d4d // MM
  */
 export const littleEndianIndicator = 0x4949 // II
 
+/**
+ * Represents a tag with id, name, group and category.
+ * @typedef Tag
+ * @type {object}
+ * @property {number} id
+ * @property {string} name
+ * @property {string} group
+ * @property {string} category
+ */
+
+/**
+ * All tags with additional values.
+ * @type {Object<number, Tag>}
+ */
 export const allTagsFull = {
   0x0000: {
     id: 0x0000,
