@@ -42,7 +42,7 @@ export const littleEndianIndicator = 0x4949 // II
  * All tags with additional values.
  * @type {Object<number, Tag>}
  */
-export const allTagsFull = {
+export const tags = {
   0x0000: {
     id: 0x0000,
     name: 'GPSVersionID',
@@ -910,11 +910,16 @@ export const allTagsFull = {
 }
 
 /**
+ * @deprecated
+ */
+export const allTagsFull = tags
+
+/**
  * EXIF IFD tags.
  * @type {Object.<number, string>}
  */
 export const exifIfdTags = Object
-  .values(allTagsFull)
+  .values(tags)
   .filter(tag => tag.category === 'ifd')
   .reduce((acc, tag) => ({ ...acc, [tag.id]: tag.name }), {})
 
@@ -923,7 +928,7 @@ export const exifIfdTags = Object
  * @type {Object.<number, string>}
  */
 export const exifPointerTags = Object
-  .values(allTagsFull)
+  .values(tags)
   .filter(tag => tag.category === 'pointer')
   .reduce((acc, tag) => ({ ...acc, [tag.id]: tag.name }), {})
 
@@ -932,7 +937,7 @@ export const exifPointerTags = Object
  * @type {Object.<number, string>}
  */
 export const gpsTags = Object
-  .values(allTagsFull)
+  .values(tags)
   .filter(tag => tag.category === 'gps')
   .reduce((acc, tag) => ({ ...acc, [tag.id]: tag.name }), {})
 
@@ -941,7 +946,7 @@ export const gpsTags = Object
  * @type {Object.<number, string>}
  */
 export const tiffTags = Object
-  .values(allTagsFull)
+  .values(tags)
   .filter(tag => tag.category === 'tiff')
   .reduce((acc, tag) => ({ ...acc, [tag.id]: tag.name }), {})
 
@@ -950,5 +955,5 @@ export const tiffTags = Object
  * @type {Object.<number, string>}
  */
 export const allTags = Object
-  .values(allTagsFull)
+  .values(tags)
   .reduce((acc, tag) => ({ ...acc, [tag.id]: tag.name }), {})
